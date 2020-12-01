@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>ca9b6510-7dda-48b3-9728-2bae38bad627</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>BubbleSort.py</StartupFile>
+    <StartupFile>SelectionSort.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -44,6 +44,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Queue.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SelectionSort.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="SingleLinkedList.py" />
