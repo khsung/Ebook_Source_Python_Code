@@ -25,9 +25,13 @@ def quicksort(arr):
         else:
             arr[left-1],arr[pivot]=arr[pivot],arr[left-1]
         print(arr)
+
+        #왼쪽 리스트, 오른쪽 리스트로 나누어 
+        #각각 길이가 1이 될때까지 반복
         return quicksort(arr[:left])+quicksort(arr[right:])
 
 arr=[5,1,3,7,6,2,4]
 print("정렬 전 배열 : ",arr)
 print("\n정렬 과정")
 print("\n정렬 된 배열 : ",quicksort(arr))
+
