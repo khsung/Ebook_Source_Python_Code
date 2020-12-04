@@ -27,7 +27,7 @@ def quicksort(arr):
         print(arr)
 
         #왼쪽 리스트, 오른쪽 리스트로 나누어 
-        #각각 길이가 1이 될때까지 반복
+        #각각 길이가 1 이하가 될 때까지 반복
         return quicksort(arr[:left])+quicksort(arr[right:])
 
 arr=[5,1,3,7,6,2,4]
