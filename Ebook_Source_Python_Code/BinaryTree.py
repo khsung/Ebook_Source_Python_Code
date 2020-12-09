@@ -1,4 +1,5 @@
 class Btree(object):
+    #parent=Btree()
     def __init__(self):
         self.data=None;
         self.left=self.right=None;
@@ -41,9 +42,42 @@ class Btree(object):
                 parent=self
                 self=self.left
                 self.deletenode(data)
-        #else:
-        #    if curr.left==None and curr.right==None:
-        #        if parent==None
+        else:
+            if self.left==None and self.right==None:
+                if parent.right==self:
+                    parent.right=None
+                else:
+                    parent.left=None
+            elif self.left==None:
+                temp=self
+                parent=self
+                self=self.right
+                if self.left==None:
+                    temp.data,self.data=self.data,temp.data
+                    parent.right=None
+                    del(self)
+                else:
+                    while self.left!=None:
+                        parent=self
+                        self=self.left
+                    temp.data,self.data=self.data,temp.data
+                    parent.left=None
+                    del(self)
+            else:
+                temp=self
+                parent=self
+                self=self.left
+                if self.right==None:
+                    temp.data,self.data=self.data,temp.data
+                    parent.left=None
+                    del(self)
+                else:
+                    while self.right!=None:
+                        parent=self
+                        self=self.right
+                    temp.data,self.data=self.data,temp.data
+                    parent.right=None
+                    del(self)
 
     def printnode(self):
         print(self.data)
@@ -51,6 +85,11 @@ class Btree(object):
         print(self.left.data)
         print(self.left.right.data)
 
+    def preorder(self):
+        if tree.data==None:
+            print("====")
+        else:
+            print("++++")
 
 tree=Btree()
 tree.insertnode(3)
