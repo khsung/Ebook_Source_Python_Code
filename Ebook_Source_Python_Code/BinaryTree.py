@@ -143,6 +143,7 @@ class Btree(object):
         print()
 
 tree=Btree()
+parent=Btree()
 tree.preorder()
 tree.insertnode(3)
 tree.insertnode(1)
