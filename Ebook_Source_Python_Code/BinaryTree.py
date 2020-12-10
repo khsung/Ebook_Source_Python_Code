@@ -1,9 +1,7 @@
 class Btree(object):
-    #parent=Btree()
     def __init__(self):
         self.data=None;
         self.left=self.right=None;
-    
     def insertnode(self,data):
         if self.data==None:
             self.data=data
@@ -46,8 +44,10 @@ class Btree(object):
             if self.left==None and self.right==None:
                 if parent.right==self:
                     parent.right=None
-                else:
+                elif parent.left==self:
                     parent.left=None
+                else:
+                    self.data=None;
             elif self.left==None:
                 temp=self
                 parent=self
@@ -79,22 +79,83 @@ class Btree(object):
                     parent.right=None
                     del(self)
 
-    def printnode(self):
-        print(self.data)
-        print(self.right.data)
-        print(self.left.data)
-        print(self.left.right.data)
-
     def preorder(self):
+        def preorder(node):
+            if node==None:
+                return
+            else:
+                print(node.data,end="  ")
+                preorder(node.left)
+                preorder(node.right)
+
         if tree.data==None:
-            print("====")
+                print("공백 이진 트리")
         else:
-            print("++++")
+            print("전위 순회 : ",end="")
+            if self==None:
+                return
+            else:
+                print(self.data,end="  ")
+                preorder(self.left)
+                preorder(self.right)
+        print()
+
+    def inorder(self):
+        def inorder(node):
+            if node==None:
+                return
+            else:
+                inorder(node.left)
+                print(node.data,end="  ")
+                inorder(node.right)
+
+        if tree.data==None:
+                print("공백 이진 트리")
+        else:
+            print("중위 순회 : ",end="")
+            if self==None:
+                return
+            else:
+                inorder(self.left)
+                print(self.data,end="  ")
+                inorder(self.right)
+        print()
+            
+    def postorder(self):
+        def postorder(node):
+            if node==None:
+                return
+            else:
+                postorder(node.left)
+                postorder(node.right)
+                print(node.data,end="  ")
+
+        if tree.data==None:
+                print("공백 이진 트리")
+        else:
+            print("후위 순회 : ",end="")
+            if self==None:
+                return
+            else:
+                postorder(self.left)
+                postorder(self.right)
+                print(self.data,end="  ")
+        print()
 
 tree=Btree()
+tree.preorder()
 tree.insertnode(3)
-tree.insertnode(4)
 tree.insertnode(1)
+tree.insertnode(5)
+tree.deletenode(5)
+tree.insertnode(0)
+tree.deletenode(0)
 tree.insertnode(2)
-tree.printnode()
-tree.deletenode(100)
+tree.insertnode(4)
+tree.insertnode(6)
+#tree.insertnode(10)
+#tree.deletenode(10)
+#tree.deletenode(100)
+tree.preorder()
+tree.inorder()
+tree.postorder()
