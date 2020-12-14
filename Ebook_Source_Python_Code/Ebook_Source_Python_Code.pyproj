@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>ca9b6510-7dda-48b3-9728-2bae38bad627</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>BruteForce.py</StartupFile>
+    <StartupFile>RadixSort.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -71,6 +71,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="QuickSort.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RadixSort.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="RecursiveAlgorithm.py">
