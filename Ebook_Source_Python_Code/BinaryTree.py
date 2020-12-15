@@ -2,6 +2,7 @@ class Btree(object):
     def __init__(self):
         self.data=None;
         self.left=self.right=None;
+        self.parent=None;
     def insertnode(self,data):
         if self.data==None:
             self.data=data
@@ -23,61 +24,61 @@ class Btree(object):
                     self=self.left
                     self.insertnode(data)
 
-    def deletenode(self,data):
-        if tree.data==None:
-            print("공백 이진 트리")
-        elif self.data<data:
-            if self.right==None:
-                print(data,"에 해당하는 원소 없음")
-            else:
-                parent=self
-                self=self.right
-                self.deletenode(data)
-        elif self.data>data:
-            if self.left==None:
-                print(data,"에 해당하는 원소 없음")
-            else:
-                parent=self
-                self=self.left
-                self.deletenode(data)
-        else:
-            if self.left==None and self.right==None:
-                if parent.right==self:
-                    parent.right=None
-                elif parent.left==self:
-                    parent.left=None
-                else:
-                    self.data=None;
-            elif self.left==None:
-                temp=self
-                parent=self
-                self=self.right
-                if self.left==None:
-                    temp.data,self.data=self.data,temp.data
-                    parent.right=None
-                    del(self)
-                else:
-                    while self.left!=None:
-                        parent=self
-                        self=self.left
-                    temp.data,self.data=self.data,temp.data
-                    parent.left=None
-                    del(self)
-            else:
-                temp=self
-                parent=self
-                self=self.left
-                if self.right==None:
-                    temp.data,self.data=self.data,temp.data
-                    parent.left=None
-                    del(self)
-                else:
-                    while self.right!=None:
-                        parent=self
-                        self=self.right
-                    temp.data,self.data=self.data,temp.data
-                    parent.right=None
-                    del(self)
+    #def deletenode(self,data):
+    #    if tree.data==None:
+    #        print("공백 이진 트리")
+    #    elif self.data<data:
+    #        if self.right==None:
+    #            print(data,"에 해당하는 원소 없음")
+    #        else:
+    #            self.parent=self
+    #            self=self.right
+    #            self.deletenode(data)
+    #    elif self.data>data:
+    #        if self.left==None:
+    #            print(data,"에 해당하는 원소 없음")
+    #        else:
+    #            self.parent=self
+    #            self=self.left
+    #            self.deletenode(data)
+    #    else:
+    #        if self.left==None and self.right==None:
+    #            if self.parent.right==self:
+    #                self.parent.right=None
+    #            elif self.parent.left==self:
+    #                self.parent.left=None
+    #            else:
+    #                self.data=None;
+    #        elif self.left==None:
+    #            temp=self
+    #            self.parent=self
+    #            self=self.right
+    #            if self.left==None:
+    #                temp.data,self.data=self.data,temp.data
+    #                self.parent.right=None
+    #                del(self)
+    #            else:
+    #                while self.left!=None:
+    #                    self.parent=self
+    #                    self=self.left
+    #                temp.data,self.data=self.data,temp.data
+    #                self.parent.left=None
+    #                del(self)
+    #        else:
+    #            temp=self
+    #            self.parent=self
+    #            self=self.left
+    #            if self.right==None:
+    #                temp.data,self.data=self.data,temp.data
+    #                self.parent.left=None
+    #                del(self)
+    #            else:
+    #                while self.right!=None:
+    #                    self.parent=self
+    #                    self=self.right
+    #                temp.data,self.data=self.data,temp.data
+    #                self.parent.right=None
+    #                del(self)
 
     def preorder(self):
         def preorder(node):
@@ -148,9 +149,9 @@ tree.preorder()
 tree.insertnode(3)
 tree.insertnode(1)
 tree.insertnode(5)
-tree.deletenode(5)
+#tree.deletenode(5)
 tree.insertnode(0)
-tree.deletenode(0)
+#tree.deletenode(0)
 tree.insertnode(2)
 tree.insertnode(4)
 tree.insertnode(6)
