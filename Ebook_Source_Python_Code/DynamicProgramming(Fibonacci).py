@@ -23,7 +23,7 @@ def DPFibonacci(num):
         return DP[num-1]
 
 num=10  #10번째 자리
-DP=[0 for i in range(num)]
+DP=[0 for i in range(num)]  #num 크기만큼 0으로 초기화
 
 print("재귀형식 피보나치 수열의",num,"번째 숫자 :",RecursiveFibonacci(num))
 print("동적 계획법 피보나치 수열의",num,"번째 숫자 :",DPFibonacci(num))
