@@ -8,6 +8,7 @@ def RecursiveFibonacci(num):
         #재귀를 통해 매번 계산을 해야됨 = 숫자가 커지면 오버헤드
         return RecursiveFibonacci(num-1) + RecursiveFibonacci(num-2)
 
+#Dynamic Programming
 def DPFibonacci(num):
     # 1번째 숫자 : 0, 2번째 숫자 : 1 (인덱스는 0부터 시작하므로)
     if num-1 == 0 or num-1 == 1:
