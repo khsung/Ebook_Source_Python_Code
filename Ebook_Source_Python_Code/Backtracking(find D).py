@@ -10,6 +10,8 @@ class Tree(object):
         self.Lchild = None
         self.Rchild = None
 
+#원하는 원소를 찾기 위해 왼쪽 자식부터 탐색
+#재귀 알고리즘으로 구현한 깊이 우선 탐색
 def backtrackingFindAnswer(self):
     print("현재 노드의 데이터 : "+self.data)
     if self.data == answer:
