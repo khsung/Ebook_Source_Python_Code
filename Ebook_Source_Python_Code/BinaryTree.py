@@ -2,7 +2,7 @@ class Btree(object):
     def __init__(self):
         self.data=None;
         self.left=self.right=None;
-        self.parent=None;
+        self.parent=self;
     def insertnode(self,data):
         if self.data==None:
             self.data=data
@@ -20,6 +20,7 @@ class Btree(object):
                     newnode=Btree()
                     self.left=newnode
                     newnode.insertnode(data)
+                    self.parent=newnode
                 else:
                     self=self.left
                     self.insertnode(data)
@@ -144,7 +145,6 @@ class Btree(object):
         print()
 
 tree=Btree()
-parent=Btree()
 tree.preorder()
 tree.insertnode(3)
 tree.insertnode(1)
