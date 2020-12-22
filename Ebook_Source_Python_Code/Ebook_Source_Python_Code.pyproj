@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>ca9b6510-7dda-48b3-9728-2bae38bad627</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>BinaryTree.py</StartupFile>
+    <StartupFile>MergeSort.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -74,6 +74,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="LinearSearch.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MergeSort.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Queue.py">
