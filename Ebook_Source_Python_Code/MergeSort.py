@@ -54,7 +54,9 @@ def MergeSort(self, left, right):
         #배열크기가 2라면 굳이 재귀함수를
         #호출하지 않음
         if left+1 != right:
+            #왼쪽 배열
             MergeSort(self, left, mid)
+            #오른쪽 배열
             MergeSort(self, mid+1, right)
         #두개의 배열을 정렬하면서 합침
         Merge(self, left, mid, right)
