@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>ca9b6510-7dda-48b3-9728-2bae38bad627</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>MergeSort.py</StartupFile>
+    <StartupFile>Backtracking(N_Queen).py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -23,6 +23,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Backtracking%28find D%29.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Backtracking%28N_Queen%29.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="BinarySearch.py">
