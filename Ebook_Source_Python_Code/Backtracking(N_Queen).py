@@ -41,6 +41,8 @@ def delAtackLine(self, row, column, N):
 
 def N_Queen(self, row, N):
     global count
+    print("row = ",row)
+    p(self,N)
     if row < N-1:
         for i in range(N):
             if self[row][i] == 0:
