@@ -48,8 +48,8 @@ def N_Queen(self, row, N):
             if self[row][i] == 0:
                 addAtackLine(self, row, i, N)
                 N_Queen(self, row+1, N)
-            if i == N-1:
                 delAtackLine(self, row, i, N)
+
     else:
         for i in range(N):
             if self[row][i] == 0:
