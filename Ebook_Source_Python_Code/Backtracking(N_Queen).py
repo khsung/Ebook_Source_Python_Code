@@ -1,5 +1,7 @@
 
 def addAtackLine(self, row, column, N):
+    #퀸이 놓인 위치를 기준으로 
+    #가로 세로 공격라인 추가
     for i in range(N):
         self[row][i] += 1
         self[i][column] += 1
@@ -38,6 +40,8 @@ def addAtackLine(self, row, column, N):
         c -= 1
 
 def delAtackLine(self, row, column, N):
+    #퀸이 놓인 위치를 기준으로 
+    #가로 세로 공격라인 제거
     for i in range(N):
         self[row][i] -= 1
         self[i][column] -= 1
