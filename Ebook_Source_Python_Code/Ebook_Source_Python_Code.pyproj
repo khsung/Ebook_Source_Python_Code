@@ -28,9 +28,6 @@
     <Compile Include="Backtracking%28N_Queen%29.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BFS.py">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="BinarySearch.py">
       <SubType>Code</SubType>
     </Compile>
@@ -55,7 +52,7 @@
     <Compile Include="Deque.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DFS.py">
+    <Compile Include="DFS_and_BFS.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Dictionary.py">
