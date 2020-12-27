@@ -28,6 +28,9 @@
     <Compile Include="Backtracking%28N_Queen%29.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Bellman-Ford_Algorithm.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="BinarySearch.py">
       <SubType>Code</SubType>
     </Compile>
@@ -56,6 +59,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Dictionary.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DijkstraAlgorithm.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DoubleLinkedList.py">
