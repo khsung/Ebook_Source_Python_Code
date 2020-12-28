@@ -103,6 +103,9 @@
     <Compile Include="RecursiveAlgorithm.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="SegmentTree.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="SelectionSort.py">
       <SubType>Code</SubType>
     </Compile>
