@@ -10,13 +10,20 @@ cost=[inf]*len(graph)        #무한대로 비용설정
 path=[inf]*len(graph)
 
 cost[startnode] = graph[startnode][startnode]
+path[startnode] = startnode
+
 
 for i in range(len(graph)):
     for j in range(len(graph[startnode])):
-        if (j != startnode) and (visited[j] == False) and (cost[startnode]+graph[j]<cost[j]):
-
-
-
-
-#print(min(graph[0]))       리스트에서 최소값반환
-#print(graph[0].index(min(graph[0])))  리스트에서 최소값의 인덱스 반환
+        if ((j != startnode) and (visited[j] == False) and (j != inf) and 
+            (cost[startnode]+graph[startnode][j]<cost[j])):
+            cost[j] = cost[startnode]+graph[startnode][j]
+            path[j] = startnode
+    visited[startnode] = True
+    min = inf
+    print(cost)
+    for j in range(len(graph[startnode])):
+        if (visited[j] == False) and (cost[j] < min):
+            min = cost[j]
+    if min != inf:
+        startnode = cost.index(min)
