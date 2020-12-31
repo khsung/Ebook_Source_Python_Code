@@ -62,4 +62,4 @@ for i in range(len(graph)):
     if i != 0:
         print(" <-",temp,end="")
         temp = path[temp]
-    print()
+    print("\n")
