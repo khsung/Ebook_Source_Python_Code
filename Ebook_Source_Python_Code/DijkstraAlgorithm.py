@@ -2,7 +2,8 @@
 inf = float("inf")  #무한대(InfInity) 변수 선언
 #그래프 행렬 선언
 graph=[[0,2,8,5,inf],[2,0,inf,1,9],[8,inf,0,2,inf],[5,1,2,0,4],[inf,9,inf,4,0]]
-startnode=0     #시작 노드
+startnode = 0       #시작 노드
+savestart = startnode   #차후에 쓰기위해 시작 노드 저장
 visited=[False]*len(graph)   #방문한 노드인지 체크하는 리스트 
 cost=[inf]*len(graph)        #무한대로 비용설정
 
@@ -48,6 +49,7 @@ for i in range(len(graph)):
 print("\n경로 배열")
 print(path)
 print()
+startnode = savestart         #원래 시작노드로 초기화
 
 #각 노드의 최소 비용 경로 출력
 for i in range(len(graph)):
@@ -56,10 +58,10 @@ for i in range(len(graph)):
     print(i,end="")
     temp = path[i]
 
-    while temp != 0:
+    while temp != startnode:
         print(" <-",temp,end="")
         temp = path[temp]
-    if i != 0:
+    if i != startnode:
         print(" <-",temp,end="")
         temp = path[temp]
     print("\n")
