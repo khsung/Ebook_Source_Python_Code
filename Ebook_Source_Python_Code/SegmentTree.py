@@ -1,6 +1,6 @@
 
 #세그먼트 트리 초기화
-#left : 세그먼트 트리 구간의 왼쪽 인덱스, right : 세그먼트 트리 구간의 오른쪽 인덱스
+#left : 세그먼트 트리 구간의 왼쪽 인덱스,right : 세그먼트 트리 구간의 오른쪽 인덱스
 def initsegment(left,right,segmentindex):
     global segmentmaxindex,origin,segmenttree     #전역 변수 선언
     #하나의 인덱스만 포함하는 노드일 경우
@@ -13,7 +13,8 @@ def initsegment(left,right,segmentindex):
     else:
         mid = int((left + right) / 2)
         #왼쪽 자식노드와 오른쪽 자식노드의 합을 저장하고 반환
-        segmenttree[segmentindex] = initsegment(left,mid,2 * segmentindex) + initsegment(mid + 1,right,2 * segmentindex + 1)
+        segmenttree[segmentindex] = (initsegment(left,mid,2 * segmentindex) + 
+                        initsegment(mid + 1,right,2 * segmentindex + 1))
         return segmenttree[segmentindex]
 
 #범위 합을 구하는 함수
@@ -30,7 +31,8 @@ def findsum(left,right,first,second,segmentindex):
         return findsum(mid + 1,right,first,second,2 * segmentindex + 1)
     #왼쪽 자식, 오른쪽 자식 둘다에 포함되는 구간일 경우
     else:
-        sum = findsum(left,mid,first,mid,2 * segmentindex) + findsum(mid + 1,right,mid + 1,second,2 * segmentindex + 1)
+        sum = (findsum(left,mid,first,mid,2 * segmentindex) + 
+                    findsum(mid + 1,right,mid + 1,second,2 * segmentindex + 1))
         return sum
 
 #범위 합 출력 함수
