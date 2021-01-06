@@ -10,9 +10,11 @@ class trie(object):
         while currword < len(wordset):
             #현재노드를 초기 노드로 초기화
             currnode = self
+
             #각 문자열의 크기만큼 반복
             while currwordindex < len(wordset[currword]):
                 #해당 문자의 인덱스 배열이 None일 때 trie클래스 생성하고 연결
+                #ord는 문자의 아스키 코드값을 반환해주는 파이썬의 내장 함수
                 if currnode.next[ord(wordset[currword][currwordindex]) - ord('a')] == None:
                     currnode.next[ord(wordset[currword][currwordindex]) - ord('a')] = trie()
                     currnode = currnode.next[ord(wordset[currword][currwordindex]) - ord('a')]
@@ -20,6 +22,7 @@ class trie(object):
                 else:
                     currnode = currnode.next[ord(wordset[currword][currwordindex]) - ord('a')]
                 currwordindex+=1
+
             #다음 문자열의 첫번째 인덱스로 넘어감
             currword+=1
             currwordindex = 0
