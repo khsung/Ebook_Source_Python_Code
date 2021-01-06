@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>ca9b6510-7dda-48b3-9728-2bae38bad627</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>TrieTree.py</StartupFile>
+    <StartupFile>Bellman-Ford_Algorithm.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
