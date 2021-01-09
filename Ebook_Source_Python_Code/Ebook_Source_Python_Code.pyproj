@@ -91,6 +91,12 @@
     <Compile Include="MergeSort.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="MST%28Kruskal%27sAlgorithm%29.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MST%28Prim%27sAlgorithm%29.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Queue.py">
       <SubType>Code</SubType>
     </Compile>
