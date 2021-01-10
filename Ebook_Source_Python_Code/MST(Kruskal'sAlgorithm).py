@@ -34,11 +34,11 @@ for i in range(len(graph)):
     union_find.append(i)
 
 for i in range(len(edgeinfo)):
-    #print("union_find : ",union_find)
+    print("union_find : ",union_find)
     if (union_find[edgeinfo[i][0]]) != (union_find[edgeinfo[i][1]]):
         union_find[edgeinfo[i][1]] = union_find[edgeinfo[i][0]]
         MST_edge.append(edgeinfo[i])
         #재귀적으로 부모노드를 찾아야함
-        while 
+        #while 
 
 print(MST_edge)
