@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>ca9b6510-7dda-48b3-9728-2bae38bad627</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>MST(Prim'sAlgorithm).py</StartupFile>
+    <StartupFile>MST(Kruskal'sAlgorithm).py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>

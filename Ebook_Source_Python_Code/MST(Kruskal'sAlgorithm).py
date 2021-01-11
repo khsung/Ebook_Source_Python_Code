@@ -1,4 +1,7 @@
 
+#def updateparent(union_find, index):
+
+
 INF = float('inf')
 
 graph = [[0,2,8,5,INF],
