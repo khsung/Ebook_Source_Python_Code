@@ -27,8 +27,7 @@ edgeinfo = []
 MST_edge = []
 
 #그래프 출력하면서 간선 정보 저장
-#무 방향 그래프이므로 시작 노드의 번호가 도착 노드의 번호보다
-#더 적게 간선을 저장
+#무 방향 그래프이므로 번호가 적은 노드를 먼저 저장
 print("행렬 그래프")
 for i in range(len(graph)):
     for j in range(len(graph[i])):
