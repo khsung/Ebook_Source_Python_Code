@@ -14,7 +14,7 @@ def union(union_find, parent, child):
     child = find(union_find,child)
     union_find[child] = parent
 
-INF = float('inf')
+INF = float('inf')      #무한대 변수 선언
 #행렬 그래프
 graph = [[0,2,8,5,INF],
        [2,0,INF,1,9],
