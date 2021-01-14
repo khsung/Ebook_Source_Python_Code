@@ -1,14 +1,13 @@
 
 class Node(object):             #Node 클래스 선언
     def __init__(self, data):   #Node 초기화
-        self.data = data
+        self.data = data        #Node 키 값
         self.next = None
 
 class SingleLinkedList(object):  #단일 연결 리스트
                                  #클래스 선언
-    def __init__(self):       
-        self.data = None         #리스트 초기화
-        self.next = None
+    def __init__(self):          #리스트 초기화
+        self.next = None         #다음 노드
 
     def addnode(self,node):      #뒤에 원소 삽입
         if self.next == None:
