@@ -1,33 +1,33 @@
 
-class Node(object):        #Node 클래스 선언
-    def __init__(self, data):    #Node 초기화
-        self.data=data
-        self.next=None
+class Node(object):                 #Node 클래스 선언
+    def __init__(self, data):       #Node 초기화
+        self.data=data              #키 값
         
 class CircularLinkedList(object):   #원형 연결 리스트
                                     #클래스 선언
-    def __init__(self):           
-        self.data=None            #리스트 초기화
-        self.next=None  
+    def __init__(self):             #리스트 초기화
+        self.next=None              #다음 노드
 
-    def addnode(self, node):      #뒤에 원소삽입
-        if self.next==None:
+    def addnode(self, node):        #뒤에 원소삽입
+        if self.next==None:         #공백 리스트일 경우
             self.next=node
             node.next=self.next
-        else:
+        else:                       #공백 리스트가 아닐 경우
             curr=self.next
             while curr.next!=self.next:
                 curr=curr.next
             curr.next=node
             node.next=self.next
 
-    def deletenode(self, data):    #특정 원소제거
+    def deletenode(self, data):     #특정 원소제거
         if self.next==None:
             print("공백 리스트")
         else:
             curr=self.next
+            #헤드 노드의 다음 노드가 지울 노드일 경우
             if self.next.data==data:
                 temp=self.next
+                #노드가 한 개일 경우
                 if self.next.next==self.next:
                     self.next=None
                     del temp
