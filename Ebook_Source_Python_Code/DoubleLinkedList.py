@@ -1,7 +1,7 @@
 
 class Node(object):             #Node 클래스 선언
     def __init__(self, data):   #Node 초기화
-        self.data=data
+        self.data=data          #Node 키 값
         self.prev=None
         self.next=None
         
@@ -9,7 +9,6 @@ class Node(object):             #Node 클래스 선언
 class DoubleLinkedList(object):  #이중 연결 리스트
                                  #클래스 선언
     def __init__(self):          #리스트 초기화
-        self.data=None           #노드 키값
         self.prev=None           #앞 노드
         self.next=None           #뒤 노드
 
