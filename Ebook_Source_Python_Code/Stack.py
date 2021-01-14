@@ -1,27 +1,34 @@
 
-class Stack(list):   #스택 클래스 선언
-    def __init__(self):   #스택 리스트로 초기화
+class Stack(list):          #스택 클래스 선언
+    def __init__(self):     #스택 리스트로 초기화
         self.data=[]
 
-    def isempty(self):    #스택 공백 상태 체크
+    def isempty(self):      #스택 공백 상태 체크
         return not self.data
 
-    def push(self, data):  #리스트 뒤에 원소 삽입
+    def push(self, data):   #리스트 뒤에 원소 삽입
         self.data.append(data)
 
-    def pop(self):     #리스트 뒤 원소 제거
+    def pop(self):          #리스트 뒤 원소 제거
         if self.isempty()==True:
             print("공백 스택")
         else:
             self.data.pop()
 
-    def printstack(self):  #스택 출력
+    def peek(self):
+        if self.isempty()==True:
+            print("공백 스택")
+        else:
+            print("상단 원소 :",self.data[-1])
+
+    def printstack(self):   #스택 출력
         print(self.data)
 
-stack=Stack()
+stack=Stack()               #스택 생성
 stack.pop()
 stack.push(10)
 stack.push(20)
+stack.peek()
 stack.printstack()
 stack.pop()
 stack.printstack()
