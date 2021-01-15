@@ -57,6 +57,7 @@ currwordindex = 0
 root = trie()
 root.maketrie(wordset,currword,currwordindex)
 
+print("존재하는 문자열 :",wordset)
 for i in range(3):
     word = input("찾을 문자열 입력 : ")
     root.findword(word)
