@@ -55,7 +55,7 @@ currword = 0
 #각 단어의 인덱스 의미
 currwordindex = 0
 root = trie()
-root.maketrie(wordset,currword,currwordindex)
+root.maketrie(wordset, currword, currwordindex)
 
 print("존재하는 문자열 :",wordset)
 for i in range(3):
