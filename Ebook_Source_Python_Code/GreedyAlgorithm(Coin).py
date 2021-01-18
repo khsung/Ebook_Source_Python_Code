@@ -5,7 +5,7 @@ cost=int(input("지불 금액 : "))
 
 for i in range(len(coinValue)):
     #최대한 적은 개수를 내기 위해 가장 큰 금액의
-    #동전부터 처리, 이게 그리디 알고리즘의 핵심
+    #동전부터 처리, 그리디 알고리즘의 핵심원리
     while coinValue[i]<=cost:
         cost-=coinValue[i]
         coinCount[i]+=1
