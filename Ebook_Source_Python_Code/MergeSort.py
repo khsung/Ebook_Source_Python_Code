@@ -8,7 +8,7 @@ def Merge(self, left, mid, right):
     tempindex=left
 
     #한쪽의 배열의 크기가 0이 될 때까지
-    #두개의 배열중 작은 원소를 임시배열에 저장
+    #두개의 배열 중 작은 원소를 임시배열에 저장
     while l <= mid and m <= right:
         if array[l] < array[m]:
             temp[tempindex] = array[l]
@@ -63,6 +63,6 @@ def MergeSort(self, left, right):
 
 array=[5, 4, 2, 3, 1]
 print("정렬 전 배열 :",array)
-print("\n정렬 과정")
+print("\n병합 정렬 과정")
 MergeSort(array, 0, len(array)-1)
 print("정렬 된 배열 :",array)
