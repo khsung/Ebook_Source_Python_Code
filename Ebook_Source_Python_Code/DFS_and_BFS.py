@@ -4,7 +4,7 @@
 
 #깊이 우선 탐색
 def DFS(graph, visited, startnode, stack):
-    #시작 노드 추가
+    #시작 노드 추가하면서 방문처리
     stack.append(startnode)
     visited[startnode] = 1
 
@@ -23,7 +23,7 @@ def DFS(graph, visited, startnode, stack):
 
 #너비 우선 탐색
 def BFS(graph, visited, startnode, queue):
-    #시작 노드 추가
+    #시작 노드 추가하면서 방문처리
     queue.append(startnode)
     visited[startnode] = 1
 
@@ -41,19 +41,23 @@ def BFS(graph, visited, startnode, queue):
     print()
 
 #그래프 행렬
-graph = [[0,1,1,0,0],[1,0,0,1,1],[1,0,0,1,0],[0,1,1,0,0],[0,1,0,0,0]]
-#시작 노드
-startnode = 0
-stack=[]
-queue=[]
+graph = [[0, 1, 1, 0, 0],
+         [1, 0, 0, 1, 1],
+         [1, 0, 0, 1, 0],
+         [0, 1, 1, 0, 0],
+         [0, 1, 0, 0, 0]]
+
+startnode = 0       #시작 노드
+stack=[]            #스택 배열
+queue=[]            #큐 배열
 
 #그래프 행렬 출력
 print("그래프 행렬")
 for i in range(len(graph)):
     print(graph[i])
 
-#방문한 노드 체크 리스트 선언
-visited = [0,0,0,0,0]
+#방문한 노드 체크 리스트 그래프 크기만큼 선언
+visited = [0 for i in range(len(graph))]
 print("\nDFS 순서 : ",end="")
 DFS(graph, visited, startnode, stack)
 
