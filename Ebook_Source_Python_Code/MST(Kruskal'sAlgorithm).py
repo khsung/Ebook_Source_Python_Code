@@ -10,17 +10,18 @@ def find(union_find, index):
 
 #union함수, 자식 노드와 부모 노드 연결
 def union(union_find, parent, child):
-    parent = find(union_find,parent)
-    child = find(union_find,child)
+    parent = find(union_find, parent)
+    child = find(union_find, child)
     union_find[child] = parent
 
 INF = float('inf')      #무한대 변수 선언
 #행렬 그래프
 graph = [[0,2,8,5,INF],
-       [2,0,INF,1,9],
-       [8,INF,0,2,INF],
-       [5,1,2,0,4],
-       [INF,9,INF,4,0]]
+         [2,0,INF,1,9],
+         [8,INF,0,2,INF],
+         [5,1,2,0,4],
+         [INF,9,INF,4,0]]
+
 #간선 정보 변수 선언 [노드 1, 노드 2, 가중치] 형태로 저장 예정
 edgeinfo = []
 #최소 신장 트리 간선 정보 저장
@@ -55,13 +56,14 @@ for i in range(len(edgeinfo)):
         print("\nunion_find 리스트 :",union_find)
         MST_edge.append(edgeinfo[i])
         print("추가된 MST 간선 :",edgeinfo[i],end="\n\n")
-    #서로 root 노드가 같다면 사이클 형성되는 것으로 판단 
+
+    #서로 root 노드가 같다면 사이클 형성되는 것으로 판단
     else:
         print("노드",edgeinfo[i][0],"노드",edgeinfo[i][1],"사이클 발생")
 
-costsum = 0           #비용 합 저장 변수
+costsum = 0             #비용 합 저장 변수
 print("\n최종 최소 신장 트리 간선 정보")
 for i in range(len(MST_edge)):
     print("노드",MST_edge[i][0],"노드",MST_edge[i][1],"가중치 :",MST_edge[i][2])
-    costsum+=MST_edge[i][2]
+    costsum += MST_edge[i][2]
 print("\n최종 비용 :",costsum)
