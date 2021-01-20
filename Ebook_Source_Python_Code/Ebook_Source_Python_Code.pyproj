@@ -88,6 +88,9 @@
     <Compile Include="LinearSearch.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="List.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="MergeSort.py">
       <SubType>Code</SubType>
     </Compile>
