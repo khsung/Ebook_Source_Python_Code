@@ -5,7 +5,6 @@ class Node(object):             #Node 클래스 선언
         self.prev=None
         self.next=None
         
-
 class DoubleLinkedList(object):  #이중 연결 리스트
                                  #클래스 선언
     def __init__(self):          #리스트 초기화
