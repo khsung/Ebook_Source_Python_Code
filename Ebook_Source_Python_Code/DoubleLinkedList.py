@@ -51,7 +51,7 @@ class DoubleLinkedList(object):  #이중 연결 리스트
                 self=self.next
             print()
 
-slist=DoubleLinkedList()    #이중 연결 리스트 생성
+slist=DoubleLinkedList()   #이중 연결 리스트 생성
 slist.printnode()
 slist.addnode(Node(10))
 slist.addnode(Node(20))
