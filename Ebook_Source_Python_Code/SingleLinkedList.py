@@ -44,7 +44,7 @@ class SingleLinkedList(object):  #단일 연결 리스트
                 self = self.next
             print()
 
-slist = SingleLinkedList()    #단일 연결 리스트 생성
+slist = SingleLinkedList()  #단일 연결 리스트 생성
 slist.printnode()
 slist.addnode(Node(10))
 slist.addnode(Node(20))
