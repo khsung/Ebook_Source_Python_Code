@@ -18,13 +18,14 @@ class trie(object):
                 if currnode.next[ord(wordset[currword][currwordindex]) - ord('a')] == None:
                     currnode.next[ord(wordset[currword][currwordindex]) - ord('a')] = trie()
                     currnode = currnode.next[ord(wordset[currword][currwordindex]) - ord('a')]
+                
                 #해당 문자의 인덱스 배열에 trie클래스가 있을 때(이미 생성된 노드일 때)
                 else:
                     currnode = currnode.next[ord(wordset[currword][currwordindex]) - ord('a')]
-                currwordindex+=1
+                currwordindex += 1
 
             #다음 문자열의 첫번째 인덱스로 넘어감
-            currword+=1
+            currword += 1
             currwordindex = 0
     
     #문자열 찾는 함수
@@ -42,14 +43,14 @@ class trie(object):
             #다음 노드로 이동
             else:
                 curr = curr.next[ord(word[currwordindex]) - ord('a')]
-                currwordindex+=1
+                currwordindex += 1
         if check == True:
             print(word,"는 존재하는 문자열",end="\n\n")
         else:
             print(word,"는 존재하지 않는 문자열",end="\n\n")
 
 #Trie에 저장할 문자열
-wordset = ["tree","trie","trim","steel","stack","bind","bin"]
+wordset = ["tree", "trie", "trim", "steel", "stack", "bind", "bin"]
 #몇 번째 단어인지를 뜻하는 변수
 currword = 0
 #각 단어의 인덱스 의미
@@ -57,7 +58,7 @@ currwordindex = 0
 root = trie()
 root.maketrie(wordset, currword, currwordindex)
 
-print("존재하는 문자열 :",wordset)
+print("존재하는 문자열 :", wordset)
 for i in range(3):
     word = input("찾을 문자열 입력 : ")
     root.findword(word)
