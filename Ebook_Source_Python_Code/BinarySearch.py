@@ -1,9 +1,11 @@
 
 import math     #수학연산을 위한 math모듈
+
 searchlist = [1, 2, 3, 4, 5, 6, 7]
 left = 0
 right = len(searchlist) - 1
-print("기존 리스트 :",searchlist)
+#기존 리스트 출력
+print("기존 리스트 :", searchlist)
 
 for i in range(2):
     check = False     #원소가 있는지 체크하는 변수
