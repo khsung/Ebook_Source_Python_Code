@@ -49,8 +49,7 @@ def MergeSort(self, left, right):
         #int형으로 형변환 시켜준다
         mid = (int)((left+right)/2)
 
-        #mid를 기준으로 두개의 배열로
-        #나눠줌
+        #mid를 기준으로 두개의 배열로 나눔
         #배열크기가 2라면 굳이 재귀함수를
         #호출하지 않음
         if left+1 != right:
