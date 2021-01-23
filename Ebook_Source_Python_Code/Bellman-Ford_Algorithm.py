@@ -63,12 +63,13 @@ cyclegraph = [[0, 6, 4, 9, inf],            #음의 순환이 있는 그래프
 edgeinfo = []                       #간선 정보 배열 초기화
 cost = [inf] * len(graph)           #비용 초기화
 cost[startnode] = 0                 #시작 노드 비용 갱신
+
 print("두 번째 그래프 행렬")
 #그래프 출력하면서 각 노드별 간선 정보 저장
 for i in range(len(cyclegraph)):
     for j in range(len(cyclegraph[i])):
         print(cyclegraph[i][j], end = " ")
-        #노드 자기자신이 아니고 연결 안된 노드도 아닐 때
+        #노드 자기 자신이 아니고 연결 안된 노드도 아닐 때
         if (cyclegraph[i][j] != 0) and (cyclegraph[i][j] != inf):
             edgeinfo.append([i, j, cyclegraph[i][j]])
     print()
